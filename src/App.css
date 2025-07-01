@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue */
+  color: #003366; /* Dark blue */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from center to allow normal document flow */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  z-index: 1050;
+  background-color: #003366; /* Dark blue */
+  padding: 1.25rem 0.75rem; /* Increased vertical padding from 0.75rem to 1.25rem */
+  display: flex;
+  justify-content: space-between; /* Space between title and items */
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem; /* Added margin at the bottom of navbar */
+  position: sticky; /* Make the navbar stick to the top */
+  top: 0; /* Position at the top of the viewport */
+}
+
+.navbar .navbar-brand {
+  margin-right: auto; /* Align title to the left */
+  color: #f0f8ff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center; /* Center the links */
+  flex-grow: 1;
+}
+
+.navbar a {
+  color: #f0f8ff; /* Light blue */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem; /* Adjust font size for better fit */
+  margin: 0 0.75rem; /* Spacing between links */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.navbar a.active-link {
+  text-decoration: underline;
+  color: #87ceeb; /* Sky blue */
+}
+
+.container, .table-container {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2rem; /* Increased from 1rem to 2rem */
+}
+
+.simple-navbar {
+  display: flex;
+  justify-content: space-between; /* Space between links */
+  align-items: center;
+  background-color: #003366; /* Dark blue */
+  padding: 0.75rem;
+  width: 100%;
+  position: relative; /* Changed from fixed to relative */
+  z-index: 1000; /* Ensure it appears above other elements */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.simple-navbar a {
+  color: #f0f8ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0.5rem; /* Add spacing between links */
+  padding: 0.25rem 0.5rem; /* Add padding for better touch area */
+}
+
+.simple-navbar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-top: 2rem; /* Increased from 1rem to 2rem */
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Hide horizontal overflow at the container level */
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00509e; /* Azul médio */
+  color: white;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.logout-button {
+  display: none; /* Removido */
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+  body {
+    padding-top: env(safe-area-inset-top, 0); /* Add safe area inset padding for notches/status bars */
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem 0.5rem; /* Increased padding from 0.5rem to 1rem */
+    position: sticky;
+    top: env(safe-area-inset-top, 0); /* Position below the safe area on iOS */
+    width: 100%;
+  }
+
+  .navbar a, .simple-navbar a {
+    font-size: 1rem;
+    margin: 0.25rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .content {
+    margin-top: 2rem; /* Increased from 1rem to 2rem */
+    padding: 0.5rem;
+    overflow-x: visible; /* Allow content to scroll horizontally if needed */
+  }
+
+  .container, .table-container {
+    margin-top: 2rem; /* Increased from 1rem to 2rem */
+    padding: 0.5rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Smaller buttons on mobile */
+  button, .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  .simple-navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .simple-navbar div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .content {
+    margin-top: 1rem; /* Reduced from 7rem since navbar is not fixed anymore */
+    padding: 0.25rem; /* Smaller padding to maximize content area */
+    overflow-x: visible; /* Allow horizontal scrolling */
+  }
+
+  .container, .table-container {
+    margin-top: 1rem; /* Reduced from 7rem since navbar is not fixed anymore */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    width: 100vw; /* Use full viewport width */
+    max-width: 100vw;
+    padding: 0; /* Remove padding to maximize space */
+  }
+
+  /* Even smaller buttons on very small screens */
+  button, .btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  /* Specific adjustments for table action buttons */
+  .table-container .btn-sm {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.3rem;
+    min-height: 24px;
+  }
+}
+
+/* Style for horizontal scrolling in responsive tables - enhanced */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+/* Improve button visibility on mobile devices */
+.btn {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Special layout for login page without navbar */
+.login-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f0f8ff; /* Light blue */
+}

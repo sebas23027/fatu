@@ -1,0 +1,28 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f0f8ff; /* Azul claro */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+  color: #003366; /* Azul escuro */
+}
+
+form button {
+  background-color: #00509e; /* Azul médio */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #003366; /* Azul escuro */
+}

@@ -1,0 +1,102 @@
+[
+    {
+        "id": 12,
+        "nif": "256198187",
+        "email": "carlosdrmsantos@gmail.com",
+        "valor": "132.60",
+        "metodo": "MB",
+        "data": "2025-06-21",
+        "enviada": 1,
+        "created_at": "2025-06-21 17:26:16"
+    },
+    {
+        "id": 13,
+        "nif": "516564730",
+        "email": "Tomasalcobia@gmail.com",
+        "valor": "160.46",
+        "metodo": "MB",
+        "data": "2025-06-20",
+        "enviada": 1,
+        "created_at": "2025-06-21 19:01:17"
+    },
+    {
+        "id": 16,
+        "nif": "Gabriel",
+        "email": "",
+        "valor": "416.35",
+        "metodo": "MB",
+        "data": "2025-06-21",
+        "enviada": 1,
+        "created_at": "2025-06-21 19:48:20"
+    },
+    {
+        "id": 20,
+        "nif": "232918694",
+        "email": "drchime@sapo.pt",
+        "valor": "104.41",
+        "metodo": "MB",
+        "data": "2025-06-22",
+        "enviada": 1,
+        "created_at": "2025-06-22 10:43:11"
+    },
+    {
+        "id": 21,
+        "nif": "516488805",
+        "email": "pedro.pitta@gmail.com",
+        "valor": "150.00",
+        "metodo": "MB",
+        "data": "2025-06-22",
+        "enviada": 1,
+        "created_at": "2025-06-22 15:05:21"
+    },
+    {
+        "id": 22,
+        "nif": "516555901",
+        "email": "nelson@danielpinhoautomoveis.pt",
+        "valor": "29.71",
+        "metodo": "MB",
+        "data": "2025-06-22",
+        "enviada": 1,
+        "created_at": "2025-06-22 17:09:25"
+    },
+    {
+        "id": 23,
+        "nif": "509020909",
+        "email": "nunoreis.c@hotmail.com",
+        "valor": "148.71",
+        "metodo": "MB",
+        "data": "2025-06-28",
+        "enviada": 1,
+        "created_at": "2025-06-28 12:29:23"
+    },
+    {
+        "id": 24,
+        "nif": "513173684",
+        "email": "acromedica@gmail.com",
+        "valor": "120.00",
+        "metodo": "MB",
+        "data": "2025-06-28",
+        "enviada": 1,
+        "created_at": "2025-06-28 16:46:01"
+    },
+    {
+        "id": 25,
+        "nif": "Musca raspberry",
+        "email": "",
+        "valor": "104.95",
+        "metodo": "MB",
+        "data": "2025-06-29",
+        "enviada": 0,
+        "created_at": "2025-06-29 18:29:40"
+    },
+    {
+        "id": 26,
+        "nif": "505366878",
+        "email": "jantunes@sociprime.com",
+        "valor": "384.91",
+        "metodo": "MB",
+        "data": "2025-06-29",
+        "enviada": 0,
+        "created_at": "2025-06-29 18:30:14"
+    }
+]

@@ -1,0 +1,234 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 90vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+  overflow-x: auto;
+  margin-top: 4rem; /* Increased from 1rem to 2rem */
+}
+
+.table {
+  width: 100%;
+  min-width: 800px; /* Ensure minimum width so content doesn't get squeezed */
+  max-width: none; /* Override any max-width limitations */
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.table th, .table td {
+  padding: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table th {
+  background-color: #00509e;
+  color: white;
+  font-size: 1rem;
+  position: sticky; /* Manter cabeçalhos visíveis durante rolagem */
+  top: 0;
+  z-index: 10;
+}
+
+.table td {
+  color: #003366;
+  vertical-align: middle; /* Alinha o conteúdo verticalmente ao centro */
+  white-space: nowrap; /* Impede quebra de texto */
+}
+
+.table td button {
+  padding: 0.3rem 0.6rem; /* Reduz o preenchimento interno */
+  font-size: 0.85rem; /* Reduz o tamanho da fonte */
+  margin: 0.2rem; /* Adiciona espaçamento entre os botões */
+  white-space: nowrap; /* Impede que o texto quebre */
+  min-width: 70px; /* Define uma largura mínima */
+  max-width: 100px; /* Define uma largura máxima */
+  height: 30px; /* Altura mínima para facilitar o toque */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table td .button-group {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os botões quebrem linha se necessário */
+  gap: 0.2rem; /* Espaçamento entre os botões */
+  justify-content: center; /* Centraliza os botões */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f0f8ff;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #e6f7ff;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.filter-container .btn {
+  margin: 0.5rem;
+}
+
+.filter-container .ms-3 {
+  margin-left: 1rem;
+}
+
+/* Ajustes específicos para dispositivos móveis */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 0.5rem;
+    overflow-x: auto;
+    margin-top: 2rem; /* Increased from 1rem to 2rem */
+    width: 100%;
+    max-width: 100vw; /* Use viewport width */
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-container .btn-group {
+    width: 100%;
+    display: flex;
+  }
+
+  .filter-container .btn-group button {
+    flex: 1;
+  }
+
+  .filter-container .ms-3 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .table th, .table td {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .table td button {
+    font-size: 0.75rem; /* Reduz ainda mais o tamanho da fonte em telas pequenas */
+    padding: 0.2rem 0.4rem; /* Reduz o preenchimento interno */
+    min-width: 60px; /* Ajusta a largura mínima */
+    height: 28px; /* Reduz a altura do botão */
+  }
+
+  .table td .button-group {
+    gap: 0.1rem; /* Reduz o espaçamento entre os botões em telas pequenas */
+  }
+}
+
+/* Ajustes específicos para telas muito pequenas */
+@media (max-width: 480px) {
+  .table-container {
+    margin-top: 2rem; /* Increased from 1rem to 2rem */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Don't hide any columns - let users scroll instead */
+  .table th:nth-child(5), .table td:nth-child(5) {
+    display: table-cell; /* Show all columns and allow scrolling */
+  }
+  
+  /* Make sure table has enough minimum width to be readable */
+  .table {
+    min-width: 800px;
+  }
+  
+  /* Botões menores para telas muito pequenas */
+  .table td button {
+    font-size: 0.7rem; /* Fonte ainda menor */
+    padding: 0.15rem 0.3rem; /* Padding mínimo */
+    min-width: 50px; /* Largura mínima reduzida */
+    max-width: 80px; /* Largura máxima reduzida */
+    height: 24px; /* Altura reduzida */
+    margin: 0.1rem; /* Margem menor */
+  }
+  
+  .table td .button-group {
+    gap: 0.05rem; /* Espaçamento mínimo entre botões */
+  }
+}
+
+/* Melhorar tamanho dos botões para facilitar o toque em telas sensíveis */
+.btn-sm {
+  min-height: 28px; /* Reduzido de 30px */
+  min-width: 28px; /* Reduzido de 30px */
+}
+
+/* Estilizar o toggle button group para melhor experiência móvel */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-group > .btn {
+  flex: 1;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #00509e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Improve horizontal scrolling for tables on mobile */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  position: relative;
+  display: block;
+}
+
+/* Ensure table takes full width of container while allowing horizontal scroll */
+.table {
+  width: 100%;
+  min-width: 800px; /* Ensure minimum width so content doesn't get squeezed */
+  max-width: none; /* Override any max-width limitations */
+}

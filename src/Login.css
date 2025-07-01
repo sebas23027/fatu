@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Light blue background */
+  margin: 0;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white; /* Changed to white for better contrast */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366; /* Dark blue color for the title */
+}
+
+.login-container label {
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #003366; /* Dark blue for labels */
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+}
+
+.login-container button {
+  padding: 0.5rem;
+  background-color: #00509e; /* Medium blue for button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #003366; /* Dark blue on hover */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
